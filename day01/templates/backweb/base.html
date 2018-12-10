@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block meta %}
+    {% endblock %}
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+
+
+    {% block css %}
+    {% endblock %}
+    <script src="/static/backweb/js/jquery-2.1.4.min.js"></script>
+
+
+</head>
+<body class="user-select">
+{% block all %}
+<section class="container-fluid">
+    <header>
+        {% block header %}
+        {% endblock %}
+     </header>
+    {% block contents %}
+    <div class="row">
+        {% block aside %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+
+    </div>
+    {% endblock %}
+
+</section>
+{% endblock %}
+
+{% block fixed %}
+
+{% endblock %}
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+{% block js %}
+{% endblock %}
+
+</body>
+</html>
